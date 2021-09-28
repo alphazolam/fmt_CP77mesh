@@ -2042,11 +2042,11 @@ def LoadModel(data, mdlList):
 	if mdlList[0].meshes and not rapi.noesisIsExporting() and mdlList[0].meshes[0].name.find("_") != -1:
 		print ("WARNING: Mesh split detected!\nUse the advanced option '-fbxmeshmerge' when exporting this model to FBX.")
 	
-	for mesh in mdl.meshes:
+	'''for mesh in mdl.meshes:
 		for uvs in mesh.uvs: 
 			uvs[0] = uvs[0] % 1.0
 			uvs[1] = uvs[1] % 1.0
-	'''if bImportMorphtargets:
+	if bImportMorphtargets:
 		print ("")
 		counter = 0
 		for mesh in mdl.meshes:
